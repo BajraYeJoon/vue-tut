@@ -52,11 +52,22 @@
   </h2>
 
   <h2 v-bind:style="headerStyleObject">Object Style</h2>
+
+  <!-- last style overrides the previous style -->
+  <h2 v-bind:style="[baseStyle, TextStyle]">Array Style</h2>
+
+  <h2 v-bind:style="[baseStyle, ErrorStyle]">Array Style</h2>
+
+  <!-- vbind shorthand -->
+  <h2 :style="[baseStyle, TextStyle]">Array Style with V-bind shorthand</h2>
+
+  <MoreVue />
 </template>
 
 <script>
 export default {
   name: "App",
+
   data() {
     return {
       name: "binaya",
@@ -73,6 +84,20 @@ export default {
         color: "blue",
         fontSize: "50px",
         padding: "30px",
+      },
+
+      baseStyle: {
+        padding: "10px 30px",
+        color: "white",
+      },
+      TextStyle: {
+        border: "1px solid green",
+        backgroundColor: "green",
+      },
+
+      ErrorStyle: {
+        backgroundColor: "red",
+        border: "1px solid red",
       },
     };
   },
