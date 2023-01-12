@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 // import App from "./App.vue";
-import MoreVue from "./MoreVue.vue";
+// import MoreVue from "./MoreVue.vue";
+import DepthVue from "./DepthVue.vue";
 
-createApp(MoreVue).mount("#app");
+createApp(DepthVue).mount("#app");
