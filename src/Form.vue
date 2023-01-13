@@ -4,15 +4,21 @@
       {{ JSON.stringify(formValue, null, 5) }}
     </pre>
   </div>
-  <form @submit="submitForm">
+  <form @submit.prevent="submitForm">
     <div>
       <label for="name">Name</label>
-      <input type="text" id="name" v-model="formValue.name" />
+      <input type="text" id="name" v-model.trim.lazy="formValue.name" />
     </div>
     <div>
       <label for="profile">Summary</label>
-      <input type="text" id="profile" v-model="formValue.profileSummary" />
+      <input type="text" id="profile" v-model.trim="formValue.profileSummary" />
     </div>
+
+    <div>
+      <label>Age</label>
+      <input type="number" id="age" v-model.number="formValue.age" />
+    </div>
+
     <div>
       <label for="country">Country</label>
       <select name="" id="country" v-model="formValue.country">
@@ -77,12 +83,12 @@ export default {
         remote: "no",
         skill: [],
         experience: "",
+        age: null,
       },
     };
   },
   methods: {
-    submitForm(event) {
-      event.preventDefault();
+    submitForm() {
       console.log("form values", this.formValue);
     },
   },

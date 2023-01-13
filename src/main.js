@@ -3,6 +3,10 @@ import { createApp } from "vue";
 // import MoreVue from "./MoreVue.vue";
 // import DepthVue from "./DepthVue.vue";
 
-import FormView from "./Form.vue";
+// import FormView from "./Form.vue";
+// import ComputedVue from "./ComputedVue.vue";
+// import WatcherVue from "./Watcher.vue";
 
-createApp(FormView).mount("#app");
+import CharVue from "./CharVue.vue";
+
+createApp(CharVue).mount("#app");
