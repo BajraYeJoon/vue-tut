@@ -7,6 +7,8 @@ import { createApp } from "vue";
 // import ComputedVue from "./ComputedVue.vue";
 // import WatcherVue from "./Watcher.vue";
 
-import CharVue from "./CharVue.vue";
+// import CharVue from "./CharVue.vue";
 
-createApp(CharVue).mount("#app");
+import MainVue from "./MainVue.vue";
+
+createApp(MainVue).mount("#app");
