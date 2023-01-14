@@ -11,6 +11,7 @@ import { createApp } from "vue";
 
 // import MainVue from "./MainVue.vue";
 
-import AdvanceVue from "./Advance.vue";
+// import AdvanceVue from "./Advance.vue";
+import DynamicComp from "./Dynamic.vue";
 
-createApp(AdvanceVue).mount("#app");
+createApp(DynamicComp).mount("#app");
