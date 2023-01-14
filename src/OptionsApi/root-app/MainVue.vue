@@ -22,7 +22,7 @@
 <script>
 // import ArticleComp from "./components/Article.vue";
 // import CompC from "./components/CompC.vue";
-import InputELement from "./components/Input.vue";
+import InputELement from "../../components/Input.vue";
 // import PopUp from "./components/Popup.vue";
 
 // import GreetVue from "./components/Greet.vue";
@@ -58,4 +58,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

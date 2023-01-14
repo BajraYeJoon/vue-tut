@@ -34,7 +34,7 @@
 
 <script>
 // import CardComp from "./components/Card.vue";
-import NameList from "./components/NameList.vue";
+import NameList from "../../components/NameList.vue";
 
 export default {
   name: "AdvanceVue",

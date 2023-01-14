@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import TabA from "./components/Tabs/TabA.vue";
-import TabB from "./components/Tabs/TabB.vue";
+import TabA from "../../components/Tabs/TabA.vue";
+import TabB from "../../components/Tabs/TabB.vue";
 
-import TabC from "./components/Tabs/TabC.vue";
+import TabC from "../../components/Tabs/TabC.vue";
 
 export default {
   name: "DynamicComp",
