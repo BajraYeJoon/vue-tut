@@ -9,6 +9,8 @@ import { createApp } from "vue";
 
 // import CharVue from "./CharVue.vue";
 
-import MainVue from "./MainVue.vue";
+// import MainVue from "./MainVue.vue";
 
-createApp(MainVue).mount("#app");
+import AdvanceVue from "./Advance.vue";
+
+createApp(AdvanceVue).mount("#app");
