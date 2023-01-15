@@ -1,23 +1,27 @@
 <template>
   <div>
     <!-- <DataComp /> -->
-    <DemoTwo />
-    <MethodComp />
+    <!-- <DemoTwo />
+    <MethodComp /> -->
+    <VModel />
   </div>
 </template>
 
 <script>
 // import DemoOne from "@/components/Demo1.vue";
-import DemoTwo from "@/components/DemoTwo.vue";
-import MethodComp from "@/components/Methods.vue";
+// import DemoTwo from "@/components/DemoTwo.vue";
+// import MethodComp from "@/components/Methods.vue";
 // import DataComp from '@/components/Data.vue';
+
+import VModel from "@/components/Vmodel.vue";
 
 export default {
   name: "CompApp",
   components: {
     // DemoOne,
-    DemoTwo,
-    MethodComp,
+    // DemoTwo,
+    // MethodComp,
+    VModel,
   },
 };
 </script>
