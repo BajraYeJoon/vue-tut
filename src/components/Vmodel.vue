@@ -1,38 +1,36 @@
 <template>
-  <!-- <div>
-    options api -->
+  <!-- <div> -->
+  <!-- options api  -->
   <!-- <input type="text" placeholder="name" v-model="info.name" ref="inputref" />
   </div> -->
 
   <!-- composiiton api -->
   <input type="text" placeholder="name" v-model="ref_name" ref="inputref" />
-  <input
-    type="text"
-    placeholder="name"
-    v-model="reactive_name"
-    ref="inputref"
-  />
+
+  <!-- <input type="text" placeholder="name" v-model="reactive_name" /> -->
   <hr />
 
   <!-- composition api & computed  -->
-  <input type="number" placeholder="age" v-model.number.lazy="ref_age" />
-  <h4>the age is {{ getAge }}</h4>
+  <!-- <input type="number" placeholder="age" v-model.number.lazy="ref_age" />
+  <h4>the age is {{ getAge }}</h4> -->
 
-  <input
+  <!-- <input
     type="number"
     placeholder="reactive_age"
     v-model.number="reactive_age"
   />
-  <h4>the age is {{ reactivegetAge }}</h4>
+  <h4>the age is {{ reactivegetAge }}</h4> -->
 </template>
 
 <script>
-import { ref, reactive, toRefs, computed } from "vue";
+import { ref, reactive, toRefs, computed, onMounted } from "vue";
 
 export default {
   name: "VModel",
   setup() {
     const ref_name = ref("");
+
+    const inputref = ref(null);
 
     const ref_age = ref("");
     const state = reactive({
@@ -48,10 +46,16 @@ export default {
       return `${state.reactive_age}`;
     });
 
+    //value is required for ref
+    onMounted(() => {
+      inputref.value.focus();
+    });
+
     return {
       ref_name,
       getAge,
       ref_age,
+      inputref,
       reactivegetAge,
       ...toRefs(state),
     };

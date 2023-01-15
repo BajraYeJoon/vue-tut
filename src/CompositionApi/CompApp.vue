@@ -4,6 +4,7 @@
     <!-- <DemoTwo />
     <MethodComp /> -->
     <VModel />
+    <!-- <WatcherVue /> -->
   </div>
 </template>
 
@@ -15,6 +16,8 @@
 
 import VModel from "@/components/Vmodel.vue";
 
+// import WatcherVue from "@/components/Watcher.vue";
+
 export default {
   name: "CompApp",
   components: {
@@ -22,6 +25,7 @@ export default {
     // DemoTwo,
     // MethodComp,
     VModel,
+    // WatcherVue,
   },
 };
 </script>
